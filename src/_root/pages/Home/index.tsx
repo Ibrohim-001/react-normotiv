@@ -4,8 +4,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import * as React from "react";
-import { SlidingNumber } from "@/components/ui/sliding-number";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -17,9 +15,9 @@ import {
 import { Link } from "react-router";
 import Sales from "@/components/shared/Sales";
 import ProductCard from "@/components/shared/Productcard";
-import { title } from "process";
 import Music from "@/components/shared/Music";
 import ExploreCard from "@/components/shared/ExploreProducts";
+import Arrival from "@/components/shared/Arrival";
 
 let data = [
   {
@@ -422,15 +420,26 @@ function Home() {
               comments={item.coments}
               indicators={item.indicators}
             />
+          
           ))}
         </div>
         <Sales
-          timer={false}
-          title="New Arrival"
           headline="Featured"
+          title="New Arrival"
+          timer={false}
           buttons={false}
           right={false}
         />
+        <div className="flex gap-[30px]">
+        <Arrival left={false} w={570}h={600}title="PlayStation 5"desc="Black and White version of the PS5 coming out on sale." img="../../../public/arrival/ps5.png"/>
+          <div className="flex flex-col gap-[30px]">
+          <Arrival left={true} w={570}h={284}title="Women’s Collections"desc="Featured woman collections that give you another vibe." img="../../../public/arrival/woman.png"/>
+            <div className="flex gap-[30px]" >
+            <Arrival left={false} w={270}h={284}title="PlayStation 5"desc="Black and White version of the PS5 coming out on sale." img="../../../public/arrival/kalonka.png"/>
+            <Arrival left={false} w={270}h={284}title="PlayStation 5"desc="Black and White version of the PS5 coming out on sale." img="../../../public/arrival/gucci.png"/>
+            </div >
+          </div>
+        </div>
       </main>
     </>
   );

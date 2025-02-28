@@ -9,7 +9,7 @@ type EploreProducts = {
   price: string;
   comments: string;
   indicators: boolean;
-  indicatorColors: string;
+ 
 };
 
 function ExploreCard({
@@ -19,7 +19,7 @@ function ExploreCard({
   price,
   comments,
   indicators,
-  indicatorColors,
+  
 }: EploreProducts) {
   const [addtocart, setaddtocart] = React.useState(false);
   const [indicator, setIndicator] = React.useState(false);

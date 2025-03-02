@@ -1,3 +1,4 @@
+import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
 import {
   Select,
@@ -42,6 +43,7 @@ function RootLayout() {
         <Navbar />
       </div>
       <Outlet />
+      <Footer/>
     </>
   );
 }

@@ -18,6 +18,7 @@ import ProductCard from "@/components/shared/Productcard";
 import Music from "@/components/shared/Music";
 import ExploreCard from "@/components/shared/ExploreProducts";
 import Arrival from "@/components/shared/Arrival";
+import Services from "./components/Services";
 
 let data = [
   {
@@ -420,7 +421,6 @@ function Home() {
               comments={item.coments}
               indicators={item.indicators}
             />
-          
           ))}
         </div>
         <Sales
@@ -431,15 +431,44 @@ function Home() {
           right={false}
         />
         <div className="flex gap-[30px]">
-        <Arrival left={false} w={570}h={600}title="PlayStation 5"desc="Black and White version of the PS5 coming out on sale." img="../../../public/arrival/ps5.png"/>
+          <Arrival
+            left={false}
+            w={570}
+            h={600}
+            title="PlayStation 5"
+            desc="Black and White version of the PS5 coming out on sale."
+            img="../../../public/arrival/ps5.png"
+          />
           <div className="flex flex-col gap-[30px]">
-          <Arrival left={true} w={570}h={284}title="Women’s Collections"desc="Featured woman collections that give you another vibe." img="../../../public/arrival/woman.png"/>
-            <div className="flex gap-[30px]" >
-            <Arrival left={false} w={270}h={284}title="PlayStation 5"desc="Black and White version of the PS5 coming out on sale." img="../../../public/arrival/kalonka.png"/>
-            <Arrival left={false} w={270}h={284}title="PlayStation 5"desc="Black and White version of the PS5 coming out on sale." img="../../../public/arrival/gucci.png"/>
-            </div >
+            <Arrival
+              left={true}
+              w={570}
+              h={284}
+              title="Women’s Collections"
+              desc="Featured woman collections that give you another vibe."
+              img="../../../public/arrival/woman.png"
+            />
+            <div className="flex gap-[30px]">
+              <Arrival
+                left={false}
+                w={270}
+                h={284}
+                title="PlayStation 5"
+                desc="Black and White version of the PS5 coming out on sale."
+                img="../../../public/arrival/kalonka.png"
+              />
+              <Arrival
+                left={false}
+                w={270}
+                h={284}
+                title="PlayStation 5"
+                desc="Black and White version of the PS5 coming out on sale."
+                img="../../../public/arrival/gucci.png"
+              />
+            </div>
           </div>
         </div>
+        <Services />
       </main>
     </>
   );

@@ -8,6 +8,8 @@ import Wishlist from "./_root/pages/Wishlist";
 import Checkout from "./_root/pages/checkout";
 import Accaunt from "./_root/pages/Account";
 import About from "./_root/pages/About";
+import Contact from "./_root/pages/Contact";
+import ProductDetails from "./_root/pages/ProductDetails";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/accaunt" element={<Accaunt />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="Havic-HV-G-92-Gamepad" element={<ProductDetails />} />
         </Route>
       </Routes>
     </>

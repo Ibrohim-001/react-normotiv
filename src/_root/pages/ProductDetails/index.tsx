@@ -1,3 +1,4 @@
+import ProductCard from "@/components/shared/Productcard";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -8,6 +9,53 @@ import React from "react";
 import { useLocation } from "react-router";
 
 function ProductDetails() {
+  let data = [
+    {
+      id: 1,
+      btn: "-40%",
+      havediscount: true,
+      image: "../../../public/ProductCards/qiziljoystik.png",
+      title: "HAVIT HV-G92 Gamepad",
+      price: "$120",
+      discount: "$160",
+      star: 5,
+      coments: "(88)",
+    },
+    {
+      id: 2,
+      btn: "-35%",
+      havediscount: true,
+      image: "../../../public/ProductCards/klava.png",
+      title: "AK-900 Wired Keyboard",
+      price: "$960",
+      discount: "$1160",
+      star: 4,
+      coments: "(75)",
+    },
+    {
+      id: 3,
+      btn: "-30%",
+      havediscount: true,
+      image: "../../../public/ProductCards/monitor.png",
+      title: "IPS LCD Gaming Monitor",
+      price: "$370",
+      discount: "$400",
+      star: 5,
+      coments: "(99)",
+    },
+    {
+      id: 4,
+      btn: "-25%",
+      havediscount: false,
+      image: "../../../public/ProductCards/deepcool.png",
+      title: "RGB liquid CPU Cooler",
+      price: "$160",
+      discount: "$170",
+      star: 4,
+      coments: "(65)",
+    },
+  ];
+
   const [image, setImage] = React.useState(
     "../../../public/productsdetail/image 57.png"
   );
@@ -424,6 +472,24 @@ function ProductDetails() {
             </div>
           </div>
         </div>
+        <div className="flex gap-4 items-center mb-[60px]">
+          <div className="block w-5 h-10 bg-[#DB4444] rounded-sm"></div>
+          <p className="font-semibold text-[#DB4444]">Related Item</p>
+        </div>
+        <section className="mb-[100px] flex gap-[30px]">
+          {data.map((item) => (
+            <ProductCard
+              key={item.id}
+              havediscount={item.havediscount}
+              discount={item.btn}
+              image={item.image}
+              title={item.title}
+              price={item.price}
+              price2={item.discount}
+              comments={item.coments}
+            />
+          ))}
+        </section>
       </main>
     </>
   );
